@@ -1,0 +1,51 @@
+body{
+    background-image: url("../images/3915228.jpg");
+    /* Set a specific height */
+    min-height: 550px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    font-size: large;
+}
+
+.navbar{
+    background-color:  #2942022a;
+    color: #294202;
+    font-family: 'Langar', cursive;
+    font-size: xx-large;
+    font-weight: bold;
+}  
+.navbar-brand{
+    margin-left:3%;
+}
+
+.head{
+   margin-left:40% ;
+
+}
+.actorimg{
+    width: 100%;
+}
+form{
+  margin-top: 3%;
+}
+.form-group{
+  margin-top: 2%;
+}
+.form-control{
+    background-color:#afcc84b2;
+}
+.btn{
+    background-color: #afcc84b2;
+}
+@media (max-width: 470px) { 
+  .head{
+      margin-left:0% ;
+   
+   }
+
+}

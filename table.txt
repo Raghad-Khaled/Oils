@@ -1,0 +1,9 @@
+CREATE TABLE oil (
+    ID int AUTO_INCREMENT,
+    NAME varchar(255),
+    prise int,
+    capacity int,
+    image varchar(255),
+    benefits varchar(1000), 
+    PRIMARY KEY (ID)
+);
