@@ -10,16 +10,16 @@ $benefits=$_POST['benefits'];
 
 
 $targetDir = "../images/";
-$fileName = basename($_FILES["file"]["name"]);
+$fileName = basename($_FILES["image"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-    // Allow certain file formats
-    $allowTypes = array('jpg','png','jpeg','gif');
+if(isset($_POST["submit"]) && !empty($_FILES["image"]["name"])){
+     //Allow certain file formats
+    $allowTypes = array('jpg','png','jpeg','gif','JPJ','PNG','JPEG','GIF');
     if(in_array($fileType, $allowTypes)){
         // Upload file to server
-        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+        if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
             $oil=new oil;
             $oil->InsertProduct($title,$se3a,$prise,$benefits,$fileName);
@@ -30,7 +30,6 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 }
 
 
-
-
+echo "<script> alert('شكرا تم اضافة المنتج ');  window.location.href='index.html';</script>";
 }
 ?>

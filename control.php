@@ -19,9 +19,13 @@ class oil
   public function InsertProduct($title,$se3a,$prise,$benefits,$image)
   {
     
-      $qury = "INSERT INTO oil (`name`,`prise`,`capacity`,`image`,`benefits`) VALUES ($title,$prise,$se3a,$image,$benefits)";
+      $qury = "INSERT INTO oil (`name`,`prise`,`capacity`,`image`,`benefits`) VALUES ('$title',$prise,$se3a,'$image','$benefits')";
       $result = mysqli_query($this->_conn, $qury);
     
+  }
+  public function getall(){
+    $qury = "SELECT * FROM `oil` WHERE 1";
+    return $result = mysqli_query($this->_conn, $qury);
   }
 
 }
